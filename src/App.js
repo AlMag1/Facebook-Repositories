@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.scss";
+import GithubRepos from "./views/github-repos";
 
 function App() {
-  return <div>test</div>;
+  return <GithubRepos />;
 }
-
 export default App;
