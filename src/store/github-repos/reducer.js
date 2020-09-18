@@ -1,9 +1,16 @@
-import TYPES from "./types";
+import TYPES from './types';
 
-const INITIAL_STATE = {};
+const INITIAL_STATE = {
+  data: []
+};
 
 const reducer = (state = INITIAL_STATE, { type, payload }) => {
   switch (type) {
+    case TYPES.GET_GITHUB_REPOS.SUCCESS:
+      return {
+        ...state,
+        data: payload
+      };
     default:
       return state;
   }

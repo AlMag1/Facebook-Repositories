@@ -1,8 +1,8 @@
-import { combineReducers } from "redux";
-import githubReducer from "./github-repos/reducer";
+import { combineReducers } from 'redux';
+import githubReposReducer from './github-repos/reducer';
 
 const combinedReducer = combineReducers({
-  githubReducer,
+  githubReposReducer
 });
 
 function rootReducer(state, action) {
