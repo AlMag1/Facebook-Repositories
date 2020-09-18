@@ -1,0 +1,12 @@
+.github-repos {
+  width: 50%;
+  margin: auto;
+
+  &__loading {
+    &-repository {
+      font-weight: 700;
+      font-size: 2rem;
+      color: #007bff;
+    }
+  }
+}

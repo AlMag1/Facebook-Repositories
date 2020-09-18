@@ -1,0 +1,13 @@
+.svg-wrap {
+  > span {
+    display: inline-flex;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+
+    > svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
