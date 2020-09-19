@@ -12,6 +12,7 @@ const reducer = (state = INITIAL_STATE, { type, payload }) => {
         ...state,
         loading: true
       };
+
     case TYPES.GET_GITHUB_REPOS.SUCCESS:
       return {
         ...state,
