@@ -1,0 +1,18 @@
+@import 'variables';
+
+:export {
+  facebook: $facebook;
+
+  size2: $size2;
+  size9: $size9;
+  size12: $size12;
+  size11: $size11;
+  size14: $size14;
+  size26: $size26;
+
+  font-weight-light: $font-weight-light;
+  font-weight-regular: $font-weight-regular;
+  font-weight-normal: $font-weight-normal;
+  font-weight-semibold: $font-weight-semibold;
+  font-weight-bold: $font-weight-bold;
+}

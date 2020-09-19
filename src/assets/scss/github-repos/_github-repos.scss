@@ -1,12 +1,215 @@
 .github-repos {
   width: 50%;
   margin: auto;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 
   &__loading {
+    justify-content: center;
+    align-items: center;
+
+    &-facebook {
+      color: $facebook;
+      margin-right: $size14;
+    }
+
     &-repository {
-      font-weight: 700;
-      font-size: 2rem;
-      color: #007bff;
+      font-weight: $font-weight-semibold;
+      font-size: 3rem;
+      color: $facebook;
+    }
+  }
+
+  .spinner-loading {
+    font-size: 2.62rem;
+    font-weight: $font-weight-light;
+    color: $facebook;
+  }
+
+  .table-wrapper {
+    .search-input {
+      border-radius: 1.25rem;
+      margin-bottom: 3.43rem;
+      border-color: $facebook;
+
+      &.form-control {
+        &:focus {
+          border-color: $facebook;
+          box-shadow: none;
+        }
+      }
+    }
+
+    .repository-results {
+      font-size: 1.25rem;
+      color: $facebook;
+      font-weight: $font-weight-semibold;
+    }
+
+    .table-dropdown {
+      > button {
+        background-color: transparent;
+        color: $facebook;
+        font-weight: $font-weight-normal;
+      }
+
+      .btn-secondary:not(:disabled):not(.disabled).active,
+      .btn-secondary:not(:disabled):not(.disabled):active,
+      .show > .btn-secondary.dropdown-toggle {
+        background-color: transparent;
+        color: $facebook;
+      }
+
+      .dropdown-menu {
+        border: 1px solid $facebook;
+        > button {
+          color: $facebook;
+          font-weight: $font-weight-light;
+          font-size: $size12;
+        }
+      }
+
+      .dropdown-item {
+        &:active {
+          background-color: transparent;
+        }
+
+        &:focus {
+          background-color: transparent;
+          outline: none;
+        }
+      }
+
+      .btn-secondary {
+        border-color: $facebook;
+        font-size: $size12;
+      }
+
+      .btn-secondary:focus {
+        box-shadow: none;
+      }
+
+      .btn-secondary:not(:disabled):not(.disabled).active:focus,
+      .btn-secondary:not(:disabled):not(.disabled):active:focus,
+      .show > .btn-secondary.dropdown-toggle:focus {
+        box-shadow: none;
+      }
+
+      .dropdown-toggle {
+        &::after {
+          margin-left: 1.5rem;
+        }
+      }
+    }
+
+    .results-per-page {
+      font-weight: $font-weight-regular;
+      font-size: $size12;
+      color: $facebook;
+      margin-right: $size11;
+      margin-left: 2.25rem;
+    }
+
+    .repos-table {
+      border: 1px solid $facebook;
+      padding: 1rem;
+      margin-top: $size9;
+      border-radius: 3px;
+      min-height: 33.87rem;
+
+      &__row {
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgba(59, 89, 152, 0.2);
+        padding: 1rem;
+        margin-bottom: 0.25rem;
+        border-radius: 3px;
+        color: $facebook;
+        font-weight: $font-weight-semibold;
+        cursor: pointer;
+
+        &.active {
+          border-left: 1px solid $facebook;
+          border-right: 1px solid $facebook;
+          border-top: 1px solid $facebook;
+        }
+
+        .star-wrapper {
+          display: flex;
+          align-items: center;
+          border: 1px solid $facebook;
+          border-radius: 12px;
+          background-color: #fff;
+          max-width: 6rem;
+
+          .star {
+            display: flex;
+            border-radius: 50%;
+            padding: 3px;
+            margin: $size2 1rem $size2 $size2;
+            background-color: $facebook;
+            margin-right: 1rem;
+          }
+
+          .star-count {
+            font-weight: $font-weight-light;
+            line-height: 1;
+          }
+        }
+      }
+
+      &__collapse {
+        padding: 1.25rem $size12;
+        margin-bottom: 0.25rem;
+        margin-top: -$size2;
+        border-left: 1px solid $facebook;
+        border-right: 1px solid $facebook;
+        border-bottom: 1px solid $facebook;
+
+        .title {
+          color: $facebook;
+          font-weight: $font-weight-bold;
+          font-size: $size14;
+        }
+
+        .description {
+          color: $facebook;
+          font-size: $size14;
+        }
+      }
+
+      &__pagination {
+        justify-content: flex-end;
+        margin-top: $size26;
+
+        .pagination {
+          margin-bottom: 0;
+
+          .page-link {
+            color: #333333;
+          }
+
+          .page-item {
+            &:not(.active) {
+              opacity: 0.3;
+              border: 1px solid #c6cbd4;
+            }
+
+            &.active {
+              .page-link {
+                background-color: $facebook;
+                border-color: transparent;
+                color: #fff;
+
+                &:focus {
+                  outline: none;
+                  box-shadow: none;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
