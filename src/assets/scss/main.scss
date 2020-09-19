@@ -4,8 +4,8 @@
 @import './base/fonts';
 @import './base/helpers';
 
+@import './components/svg-render';
+
 @import './layout/app';
 
-@import './github-repos/github-repos';
-
-@import './components/svg-render';
+@import './pages/github-repos/github-repos';
