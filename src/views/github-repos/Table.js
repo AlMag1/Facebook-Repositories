@@ -27,7 +27,7 @@ const Table = ({ data, pageSize, repos, open, setOpen }) => {
                   <div className="star">
                     <SvgRender
                       src={star}
-                      style={{ width: 16, height: 16 }}
+                      style={{ width: 12, height: 12 }}
                       className="text-white"
                     />
                   </div>
