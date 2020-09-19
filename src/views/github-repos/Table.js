@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Col, Row, Collapse } from 'reactstrap';
 
 import SvgRender from '../../components/SvgRender';
@@ -12,7 +12,7 @@ const Table = ({ data, pageSize, repos, open, setOpen }) => {
         {data
           .filter((_, index) => index < pageSize)
           .map((repo, index) => (
-            <>
+            <Fragment key={index}>
               <Row
                 key={index}
                 className={`no-gutters repos-table__row ${
@@ -41,7 +41,7 @@ const Table = ({ data, pageSize, repos, open, setOpen }) => {
                 <div className="title">Description:</div>
                 <div className="description">{repo.description}</div>
               </Collapse>
-            </>
+            </Fragment>
           ))}
       </Col>
     </Row>

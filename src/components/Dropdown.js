@@ -6,8 +6,10 @@ const Dropdown = ({ className, toggleName, items, onClick }) => {
     <UncontrolledDropdown className={className}>
       <DropdownToggle caret>{toggleName}</DropdownToggle>
       <DropdownMenu>
-        {items.map(item => (
-          <DropdownItem onClick={onClick}>{item}</DropdownItem>
+        {items.map((item, index) => (
+          <DropdownItem key={index} onClick={onClick}>
+            {item}
+          </DropdownItem>
         ))}
       </DropdownMenu>
     </UncontrolledDropdown>
