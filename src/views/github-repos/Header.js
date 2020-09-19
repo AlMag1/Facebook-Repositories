@@ -13,28 +13,34 @@ const Header = ({ handleSearchInput, pageSize, sizeOptions, setPage, setPageSize
         </Col>
       </Row>
       <Row className="no-gutters">
-        <Col className="repository-results">Repository Results</Col>
-        <Col>
-          <Dropdown
-            className="table-dropdown"
-            toggleName="Sort by"
-            items={['Name', 'Stars']}
-            onClick={() => {}}
-          />
-        </Col>
-        <Col className="d-flex align-items-center">
-          <div className="results-per-page">results per page</div>
-          <Dropdown
-            className="table-dropdown"
-            toggleName={pageSize}
-            items={[sizeOptions.find(option => option !== pageSize)]}
-            onClick={() => {
-              const size = sizeOptions.find(option => option !== pageSize);
-              setPageSize(size);
-              setPage(1);
-              setTotal(Math.ceil(100 / size));
-            }}
-          />
+        <Col className="d-flex align-items-center justify-content-between">
+          <Row className="no-gutters">
+            <Col className="repository-results">Repository Results</Col>
+          </Row>
+          <Row className="no-gutters align-items-center">
+            <Col xs={'auto'}>
+              <Dropdown
+                className="table-dropdown"
+                toggleName="Sort by"
+                items={['Name', 'Stars']}
+                onClick={() => {}}
+              />
+            </Col>
+            <Col className="d-flex align-items-center">
+              <div className="results-per-page">results per page</div>
+              <Dropdown
+                className="table-dropdown"
+                toggleName={pageSize}
+                items={[sizeOptions.find(option => option !== pageSize)]}
+                onClick={() => {
+                  const size = sizeOptions.find(option => option !== pageSize);
+                  setPageSize(size);
+                  setPage(1);
+                  setTotal(Math.ceil(100 / size));
+                }}
+              />
+            </Col>
+          </Row>
         </Col>
       </Row>
     </>
