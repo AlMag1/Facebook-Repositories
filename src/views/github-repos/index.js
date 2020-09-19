@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Col, Row } from 'reactstrap';
 
-import Loader from './Loader';
 import { getGithubRepos } from '../../store/github-repos/actions';
 
+import Loader from './Loader';
 import Header from './Header';
 import Table from './Table';
 import Pagination from './Pagination';
@@ -53,9 +53,7 @@ const Repos = () => {
               setTotal={setTotal}
             />
             <Table data={data} pageSize={pageSize} repos={repos} open={open} setOpen={setOpen} />
-            {data.length ? (
-              <Pagination page={page} totalPages={totalPages} setPage={setPage} />
-            ) : null}
+            <Pagination data={data} page={page} totalPages={totalPages} setPage={setPage} />
           </Col>
         </Row>
       )}
