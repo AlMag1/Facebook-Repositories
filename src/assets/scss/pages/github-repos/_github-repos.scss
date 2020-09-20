@@ -1,6 +1,6 @@
 .github-repos {
-  padding-bottom: $size64;
   width: 100%;
+  overflow: auto;
 
   .repository-small {
     font-size: $size20;
@@ -15,6 +15,7 @@
 
   .table-wrapper {
     margin-top: $size92;
+    padding-bottom: $size55;
 
     .search-input {
       border-radius: $size20;
