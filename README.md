@@ -16,7 +16,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### Developer thoughts
+### `Developer thoughts`
 
 This app is based on bootstrap css framework. 
 Styling is implemented using Sass preprocessor, based on 7-1 pattern.
