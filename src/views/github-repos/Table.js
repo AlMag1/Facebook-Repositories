@@ -24,14 +24,20 @@ const Table = ({ data, pageSize, repos, open, setOpen }) => {
                   {repo.name}
                 </Col>
                 <Col xs={4} className="star-wrapper">
-                  <div className="star">
-                    <SvgRender
-                      src={star}
-                      style={{ width: 12, height: 12 }}
-                      className="text-white"
-                    />
-                  </div>
-                  <div className="star-count">{repo.stargazers_count}</div>
+                  <Row className="no-gutters w-100 align-items-center">
+                    <Col xs={'auto'}>
+                      <div className="star">
+                        <SvgRender
+                          src={star}
+                          style={{ width: 12, height: 12 }}
+                          className="text-white"
+                        />
+                      </div>
+                    </Col>
+                    <Col className="d-flex align-items-center justify-content-center">
+                      <div className="star-count">{repo.stargazers_count}</div>
+                    </Col>
+                  </Row>
                 </Col>
                 <Col xs={4} className="justify-content-end d-flex">
                   <SvgRender src={arrow} style={{ width: 10, height: 10 }} />
