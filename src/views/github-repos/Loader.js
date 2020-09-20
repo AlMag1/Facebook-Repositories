@@ -1,25 +1,16 @@
 import React from 'react';
 import { Col, Row, Spinner } from 'reactstrap';
 
-import SvgRender from '../../components/SvgRender';
-import facebook from '../../assets/svg/facebook.svg';
+import Logo from '../../components/Logo';
 
 const Loader = () => {
   return (
-    <Row className="no-gutters github-repos__loading">
+    <Row className="no-gutters app-logo">
       <Col>
-        <Row className="no-gutters align-items-center justify-content-center mb-4">
-          <Col xs={'auto'} className="d-flex">
-            <SvgRender
-              src={facebook}
-              style={{ width: 76, height: 76 }}
-              className="github-repos__loading-facebook"
-            />
-          </Col>
-          <Col xs={'auto'} className="github-repos__loading-repository">
-            <div>Repository</div>
-          </Col>
-        </Row>
+        <Logo
+          className="align-items-center justify-content-center mb-4"
+          svgStyle={{ width: 76, height: 76 }}
+        />
         <Row className="no-gutters align-items-center justify-content-center">
           <Col xs={12} className="d-flex align-items-center justify-content-center">
             <Spinner color="warning" />

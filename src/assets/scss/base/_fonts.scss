@@ -3,5 +3,9 @@ body {
 }
 
 .font-weight-semibold {
-  font-weight: 600;
+  font-weight: $font-weight-semibold;
+}
+
+.font-weight-regular {
+  font-weight: $font-weight-regular !important;
 }

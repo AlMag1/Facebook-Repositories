@@ -2,3 +2,16 @@
   display: flex;
   height: 100vh;
 }
+
+.app-logo {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  &__repository {
+    font-weight: $font-weight-semibold;
+    font-size: 3rem;
+    color: $facebook;
+    margin-left: $size14;
+  }
+}

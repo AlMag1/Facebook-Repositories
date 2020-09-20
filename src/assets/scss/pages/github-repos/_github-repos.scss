@@ -1,23 +1,10 @@
 .github-repos {
-  width: 50%;
-  margin: auto;
-  padding-top: 4rem;
   padding-bottom: 4rem;
+  width: 100%;
 
-  &__loading {
-    justify-content: center;
-    align-items: center;
-
-    &-facebook {
-      color: $facebook;
-      margin-right: $size14;
-    }
-
-    &-repository {
-      font-weight: $font-weight-semibold;
-      font-size: 3rem;
-      color: $facebook;
-    }
+  .repository-small {
+    font-size: $size20;
+    margin-left: $size6;
   }
 
   .spinner-loading {
@@ -27,6 +14,8 @@
   }
 
   .table-wrapper {
+    margin-top: $size92;
+
     .search-input {
       border-radius: 1.25rem;
       margin-bottom: 3.43rem;
