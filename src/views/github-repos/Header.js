@@ -1,10 +1,23 @@
 import React from 'react';
 import { Col, Row } from 'reactstrap';
+import _sortBy from 'lodash/sortBy';
 
 import Input from '../../components/Input';
 import Dropdown from '../../components/Dropdown';
 
-const Header = ({ handleSearchInput, pageSize, sizeOptions, setPage, setPageSize, setTotal }) => {
+const Header = ({
+  handleSearchInput,
+  pageSize,
+  sizeOptions,
+  setPage,
+  setPageSize,
+  setTotal,
+  sort,
+  setSort,
+  setData,
+  data
+}) => {
+  const sortItems = ['Name', 'Stars'];
   return (
     <>
       <Row className="no-gutters">
@@ -21,9 +34,13 @@ const Header = ({ handleSearchInput, pageSize, sizeOptions, setPage, setPageSize
             <Col xs={'auto'}>
               <Dropdown
                 className="table-dropdown"
-                toggleName="Sort by"
-                items={['Name', 'Stars']}
-                onClick={() => {}}
+                toggleName={`Sort by (${sort})`}
+                items={sortItems}
+                onClick={event => {
+                  const sortBy = event.currentTarget.textContent;
+                  setSort(sortBy);
+                  setData(_sortBy([...data], sortBy === 'Stars' ? 'stargazers_count' : 'name'));
+                }}
               />
             </Col>
             <Col className="d-flex align-items-center">
