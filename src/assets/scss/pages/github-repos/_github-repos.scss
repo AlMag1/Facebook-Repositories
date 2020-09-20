@@ -1,5 +1,5 @@
 .github-repos {
-  padding-bottom: 4rem;
+  padding-bottom: $size64;
   width: 100%;
 
   .repository-small {
@@ -8,7 +8,7 @@
   }
 
   .spinner-loading {
-    font-size: 2.62rem;
+    font-size: $size42;
     font-weight: $font-weight-light;
     color: $facebook;
   }
@@ -17,8 +17,8 @@
     margin-top: $size92;
 
     .search-input {
-      border-radius: 1.25rem;
-      margin-bottom: 3.43rem;
+      border-radius: $size20;
+      margin-bottom: $size55;
       border-color: $facebook;
 
       &.form-control {
@@ -30,7 +30,7 @@
     }
 
     .repository-results {
-      font-size: 1.25rem;
+      font-size: $size20;
       color: $facebook;
       font-weight: $font-weight-semibold;
     }
@@ -86,7 +86,7 @@
 
       .dropdown-toggle {
         &::after {
-          margin-left: 1.5rem;
+          margin-left: $size24;
         }
       }
     }
@@ -96,12 +96,12 @@
       font-size: $size12;
       color: $facebook;
       margin-right: $size11;
-      margin-left: 2.25rem;
+      margin-left: $size36;
     }
 
     .repos-table {
       border: 1px solid $facebook;
-      padding: 1rem;
+      padding: $size16;
       margin-top: $size9;
       border-radius: 3px;
       min-height: 33.87rem;
@@ -110,8 +110,8 @@
         align-items: center;
         justify-content: space-between;
         background-color: rgba(59, 89, 152, 0.2);
-        padding: 1rem;
-        margin-bottom: 0.25rem;
+        padding: $size16;
+        margin-bottom: $size4;
         border-radius: 3px;
         color: $facebook;
         font-weight: $font-weight-semibold;
@@ -127,9 +127,9 @@
           display: flex;
           align-items: center;
           border: 1px solid $facebook;
-          border-radius: 12px;
+          border-radius: $size12;
           background-color: #fff;
-          max-width: 6rem;
+          max-width: $size96;
 
           .star {
             display: flex;
@@ -147,8 +147,8 @@
       }
 
       &__collapse {
-        padding: 1.25rem $size12;
-        margin-bottom: 0.25rem;
+        padding: $size20 $size12;
+        margin-bottom: $size4;
         margin-top: -$size2;
         border-left: 1px solid $facebook;
         border-right: 1px solid $facebook;
