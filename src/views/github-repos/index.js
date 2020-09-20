@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Col, Row } from 'reactstrap';
+import _sortBy from 'lodash/sortBy';
 
 import { getGithubRepos } from '../../store/github-repos/actions';
 
@@ -29,13 +30,15 @@ const Repos = () => {
       pageSize,
       page
     };
-    dispatch(getGithubRepos(params)).then(res => setData([...res]));
+    dispatch(getGithubRepos(params)).then(
+      res => setData(sort === 'Name' ? [...res] : _sortBy([...res], 'stargazers_count')) // Apply stars sorting on page change if selected sorting is stars
+    );
   }, [dispatch, pageSize, page]);
 
   const handleSearchInput = event => {
     const filtered = repos.filter(d => d.name.includes(event.target.value));
 
-    setTotal(Math.ceil(filtered.length === pageSize ? 100 / pageSize : filtered.length / pageSize));
+    setTotal(Math.ceil(filtered.length === pageSize ? 100 / pageSize : filtered.length / pageSize)); // Calculate pagination total pages, based on search results
     setData([...filtered]);
   };
 
